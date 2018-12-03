@@ -1,5 +1,6 @@
-package gui;
+package intermediary;
 
+import gui.LoginPage;
 
 public class Main {
 

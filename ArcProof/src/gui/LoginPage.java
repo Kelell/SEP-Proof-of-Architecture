@@ -2,11 +2,12 @@ package gui;
 
 import javax.swing.*;  
 import java.awt.event.*;  
+
 public class LoginPage implements ActionListener{  
     JTextField ufield,pfield;
     JLabel value,user,pword;
     JButton b;  
-    LoginPage(){  
+    public LoginPage(){  
     	JFrame f= new JFrame("LoginPage");
     	JLabel user=new JLabel("Username:");    
         user.setBounds(10, 110, 110, 100);
@@ -14,6 +15,7 @@ public class LoginPage implements ActionListener{
         ufield.setBounds(110, 150, 200, 30);
         JLabel pword=new JLabel("Password:");    
         pword.setBounds(10, 165, 110, 100); 
+        //JPasswordField types were just not working, so implemented as a textfield instead
         pfield=new JTextField();  
         pfield.setBounds(110, 200, 200, 30);   
         value=new JLabel();  
@@ -28,9 +30,12 @@ public class LoginPage implements ActionListener{
     }         
     public void actionPerformed(ActionEvent e) {  
         String s1=ufield.getText();  
-        String s2=pfield.getText();   
-        String result="Username: " +s1+ ", Password: "   
-        +s2;
-        value.setText(result);  
+        String s2=pfield.getText();     
+        if(s1.equals("test") && s2.equals("student")){ 
+        	value.setText("correct");
+        }
+        else {
+        	value.setText("wrong!");
+        }
     } 
 }
