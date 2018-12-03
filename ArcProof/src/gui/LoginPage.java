@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 
 import javax.swing.*;    
 import java.awt.event.*;  
-public class frame {  
+public class LoginPage {  
     public static void main(String[] args) {    
     JFrame f=new JFrame("Login Page");    
      final JLabel label = new JLabel();            
