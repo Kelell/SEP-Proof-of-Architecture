@@ -5,13 +5,13 @@ public class HomePage implements ActionListener{
  
     JButton forum,tracker;  
     public HomePage(){  
-        JFrame f= new JFrame();     
+    	JFrame f= new JFrame("HomePage");    
         forum=new JButton("Forum");  
-        forum.setBounds(50,200,50,50);  
-        tracker=new JButton("-");  
-        tracker.setBounds(120,200,50,50);  
-        forum.addActionListener(this);  
-        forum.addActionListener(this);  
+        forum.setBounds(50,250,200,60);
+        tracker=new JButton("Tracker");  
+        tracker.setBounds(50,350,200,60);  
+        forum.addActionListener(this);
+        tracker.addActionListener(this); 
         f.add(forum);f.add(tracker);  
         f.setSize(330,640);  
         f.setLayout(null);  
@@ -20,9 +20,9 @@ public class HomePage implements ActionListener{
     public void actionPerformed(ActionEvent e) {  
  
         if(e.getSource()==forum){  
-        	new HomePage(); 
-        }else if(e.getSource()==tracker){  
-        	new HomePage();  
+        	new ForumPage();;
+        }else if(e.getSource()==tracker){ 
+        	new TrackerPage();  
         }  
     } 
 }
