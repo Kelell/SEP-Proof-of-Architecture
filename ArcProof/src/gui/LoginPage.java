@@ -26,13 +26,14 @@ public class LoginPage implements ActionListener{
         f.add(user);f.add(ufield);f.add(pword);f.add(pfield);f.add(value);f.add(b);  
         f.setSize(330,640);   
         f.setLayout(null);  
-        f.setVisible(true);  
+        f.setVisible(true); 
     }         
     public void actionPerformed(ActionEvent e) {  
         String s1=ufield.getText();  
         String s2=pfield.getText();     
         if(s1.equals("test") && s2.equals("student")){ 
-        	value.setText("correct");
+        	value.setText("correct!");
+        	new HomePage();
         }
         else {
         	value.setText("wrong!");
