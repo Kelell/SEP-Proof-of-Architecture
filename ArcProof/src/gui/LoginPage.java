@@ -3,6 +3,7 @@ package gui;
 import javax.swing.*;  
 import java.awt.event.*;  
 
+//implements the page that requests the user enter there details
 public class LoginPage implements ActionListener{  
     JTextField ufield,pfield;
     JLabel value,user,pword;
@@ -24,10 +25,11 @@ public class LoginPage implements ActionListener{
         b.setBounds(110,250,140,40);    
         b.addActionListener(this);   
         f.add(user);f.add(ufield);f.add(pword);f.add(pfield);f.add(value);f.add(b);  
-        f.setSize(330,640);   
+        f.setSize(360,670);   
         f.setLayout(null);  
         f.setVisible(true); 
     }         
+    //Compare the username and password to values stored in the database
     public void actionPerformed(ActionEvent e) {  
         String s1=ufield.getText();  
         String s2=pfield.getText();     
